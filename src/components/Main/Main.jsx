@@ -8,7 +8,7 @@ const Main = () => {
     const [courses, setCourse] = useState([])
     const [corseName, setCourseName] = useState([])
     const [totalCredit, setTotalCredit] = useState(0)
-   
+    const [ remainingHour, setRemainingHour]= useState(0)
 
     useEffect( ()=>{
         fetch('jsonData.json')
