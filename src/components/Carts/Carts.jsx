@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 
 
-const Carts = ({course}) => {
-    console.log(course)
+const Carts = ({course, handleCourseName}) => {
+    // console.log(course)
     const{cover, Programming_course_name, course_description,credit,price}= course
     return (
         <div className="w-72 h-96 bg-base-300 shadow-xl p-3 rounded-lg space-y-3">
@@ -14,7 +15,9 @@ const Carts = ({course}) => {
                
             </div>
             <div className="flex items-end">
-            <button className="bg-blue-500 p-2 w-full rounded-lg">Select</button>
+            <button 
+            onClick={()=>handleCourseName(course)}
+            className="bg-blue-500 p-2 w-full rounded-lg">Select</button>
             </div>
             
         </div>

@@ -6,26 +6,66 @@ import Carts from "../Carts/Carts";
 
 const Main = () => {
     const [courses, setCourse] = useState([])
+    const [corseName, setCourseName] = useState([])
+    const [totalCredit, setTotalCredit] = useState(0)
+   
 
     useEffect( ()=>{
         fetch('jsonData.json')
         .then(res => res.json())
         .then( data => setCourse(data))
     } ,[])
+
+    const handleCourseName = (course) =>{
+        const names = corseName.find( name => name.id == course.id )
+        let count = course.credit;
+        if(names){
+            alert ('already selected')
+        }
+        else{
+            corseName.forEach( item =>{
+                count = count + item.credit
+            })
+
+            const remaining = 20 - count
+            if( count > 20){
+                alert('credit limit')
+            }
+            else{
+            setTotalCredit(count)
+            setRemainingHour(remaining)
+            // console.log(remaining)
+            // console.log(count)
+            setCourseName([...corseName, course])
+            }
+            
+        }
+        
+      
+    }
+    // console.log(corseName)
     return (
         <div className="md:flex gap-5">
             <div className="w-3/4">
             <h3>main: {courses.length} </h3>
             <div className=" grid gap-4 grid-cols-1 md:grid-cols-3">
             {
-                courses.map ( course =><Carts key={course.id} course={course} ></Carts>  )
+                courses.map ( course =><Carts
+                     key={course.id}
+                     handleCourseName={handleCourseName}
+
+                      course={course} ></Carts>  )
             }
 
             </div>
            
             </div>
             <div className="1/4">
-                <Cart></Cart>
+                <Cart
+                totalCredit={totalCredit}
+                 corseName= {corseName}
+                 remainingHour={remainingHour}
+                 ></Cart>
             </div>
         </div>
     );
