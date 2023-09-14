@@ -2,7 +2,7 @@ import { useState } from "react";
 import Cart from "../Cart/Cart";
 import { useEffect } from "react";
 import Carts from "../Carts/Carts";
-
+import swal from 'sweetalert';
 
 const Main = () => {
     const [courses, setCourse] = useState([])
@@ -15,12 +15,14 @@ const Main = () => {
         .then(res => res.json())
         .then( data => setCourse(data))
     } ,[])
-
+    const handleToast = () =>{
+        toast ('tost')
+    }
     const handleCourseName = (course) =>{
         const names = corseName.find( name => name.id == course.id )
         let count = course.credit;
         if(names){
-            alert ('already selected')
+            swal("Already Selected The Course");
         }
         else{
             corseName.forEach( item =>{
@@ -29,7 +31,11 @@ const Main = () => {
 
             const remaining = 20 - count
             if( count > 20){
-                alert('credit limit')
+                
+            swal ('credit over')
+            }
+             if(remaining < 0){
+                swal ('Finished credit hour')
             }
             else{
             setTotalCredit(count)
@@ -38,16 +44,16 @@ const Main = () => {
             // console.log(count)
             setCourseName([...corseName, course])
             }
-            
+            <ToastContainer />
         }
         
-      
+       
     }
     // console.log(corseName)
     return (
         <div className="md:flex gap-5">
             <div className="w-3/4">
-            <h3>main: {courses.length} </h3>
+            
             <div className=" grid gap-4 grid-cols-1 md:grid-cols-3">
             {
                 courses.map ( course =><Carts
