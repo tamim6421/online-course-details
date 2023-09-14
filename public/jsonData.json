@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "cover": "https://i.ibb.co/fMKq6gY/Rectangle-2.png",
+      "Programming_course_name": "Python Mastery",
+      "course_description": "Comprehensive Python course for beginners and intermediate developers.",
+      "credit": 4,
+      "price": 30
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co/fSNZvJ5/Rectangle-2-1.png",
+      "Programming_course_name": "Web Development Basics",
+      "course_description": "Learn HTML, CSS, and JavaScript foundational course.",
+      "credit": 3,
+      "price": 40
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co/KsC2cbt/Rectangle-2-4.png",
+      "Programming_course_name": "Data Science Essentials",
+      "course_description": "Introductory course covering data  analysis and visualization.",
+      "credit": 5,
+      "price": 50
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co/86Nc4w1/Rectangle-2-5.png",
+      "Programming_course_name": "Java for Beginners",
+      "course_description": "Learn the fundamentals of ethical algorithms Java programming language.",
+      "credit": 4,
+      "price": 60
+    },
+    {
+      "id": 5,
+      "cover": "https://i.ibb.co/V25w6b2/Rectangle-2-6.png",
+      "Programming_course_name": "Machine Learning Fundamentals",
+      "course_description": "Introduction to machine learning and techniques.",
+      "credit": 6,
+      "price": 70
+    },
+    {
+      "id": 6,
+      "cover": "https://i.ibb.co/fSNZvJ5/Rectangle-2-1.png",
+      "Programming_course_name": "Advanced JavaScript",
+      "course_description": "In-depth exploration ethical algorithms of advanced JavaScript concepts.",
+      "credit": 3,
+      "price": 80
+    },
+    {
+      "id": 7,
+      "cover": "https://i.ibb.co/fMKq6gY/Rectangle-2.png",
+      "Programming_course_name": "Database Design",
+      "course_description": "Learn the principles and practices of ethical algorithms effective database design.",
+      "credit": 4,
+      "price": 90
+    },
+    {
+      "id": 8,
+      "cover": "https://i.ibb.co/2cqnS5j/Rectangle-3.png",
+      "Programming_course_name": "Mobile App Development",
+      "course_description": "Build mobile apps for Android and iOS platforms.",
+      "credit": 5,
+      "price": 100
+    },
+    {
+      "id": 9,
+      "cover": "https://i.ibb.co/7pDb909/Rectangle-3-1.png",
+      "Programming_course_name": "Ethical Hacking",
+      "course_description": "Learn cybersecurity and ethical algorithms and hacking techniques.",
+      "credit": 6,
+      "price": 20
+    }
+  ]
+  
+
+
+
+
