@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 
-const Cart = ({ corseName, remainingHour, totalCredit }) => {
-  console.log(corseName);
+const Cart = ({ corseName, remainingHour, totalCredit,totalPrice }) => {
+  // console.log(corseName);
   return (
     <div className="w-80  bg-base-300 shadow-xl p-3 rounded-lg mt-3">
       <div>
@@ -19,8 +19,11 @@ const Cart = ({ corseName, remainingHour, totalCredit }) => {
         ))}
       </div>
       <div>
-        <h3 className="text-xl font-bold border-b-2 p">
+        <h3 className="text-xl font-bold border-b-2 p-4">
           Total Credit Hour : <span>{totalCredit}</span>{" "}
+        </h3>
+        <h3 className="text-xl font-bold border-b-2 p-4">
+          Total Price : {totalPrice} USD
         </h3>
       </div>
     </div>

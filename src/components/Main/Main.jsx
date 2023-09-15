@@ -9,6 +9,7 @@ const Main = () => {
     const [corseName, setCourseName] = useState([])
     const [totalCredit, setTotalCredit] = useState(0)
     const [ remainingHour, setRemainingHour]= useState(20)
+    const [ totalPrice, setTotalPrice] = useState(0)
 
     useEffect( ()=>{
         fetch('jsonData.json')
@@ -19,14 +20,16 @@ const Main = () => {
     const handleCourseName = (course) =>{
         const names = corseName.find( name => name.id == course.id )
         let count = course.credit;
+        let total = course.price
         if(names){
             swal("Already Selected The Course");
         }
         else{
             corseName.forEach( item =>{
                 count = count + item.credit
+                total = total+ item.price
             })
-
+            // console.log(total)
             const remaining = 20 - count
             if( count > 20){
                 
@@ -38,6 +41,7 @@ const Main = () => {
             else{
             setTotalCredit(count)
             setRemainingHour(remaining)
+            setTotalPrice(total)
             // console.log(remaining)
             // console.log(count)
             setCourseName([...corseName, course])
@@ -69,6 +73,7 @@ const Main = () => {
                 totalCredit={totalCredit}
                  corseName= {corseName}
                  remainingHour={remainingHour}
+                 totalPrice ={totalPrice}
                  ></Cart>
             </div>
         </div>
