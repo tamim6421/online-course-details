@@ -4,7 +4,7 @@
 const Cart = ({ corseName, remainingHour, totalCredit,totalPrice }) => {
   // console.log(corseName);
   return (
-    <div className="w-80  bg-base-300 shadow-xl p-3 rounded-lg mt-3">
+    <div className="w-80 bg-base-300 shadow-xl p-3 rounded-lg mt-3">
       <div>
         <h3 className="text-blue-600 font-semibold text-xl bg-gray-100 p-1 rounded-lg ">
           Credit Hour Remaining <span>{remainingHour} </span>hr
@@ -13,7 +13,7 @@ const Cart = ({ corseName, remainingHour, totalCredit,totalPrice }) => {
       <h2 className="mt-4 text-xl font-bold m-4 ">Course Name</h2>
       <div className="border-b-2">
         {corseName.map((course, i) => (
-          <div className="mb-3 text-gray-600 font-semibold">
+          <div key={course.id} className="mb-3 text-gray-600 font-semibold text-start">
             {i + 1}. {course.Programming_course_name}{" "}
           </div>
         ))}

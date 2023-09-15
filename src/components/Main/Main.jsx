@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import Carts from "../Carts/Carts";
 import swal from 'sweetalert';
 
+
+
+
 const Main = () => {
     const [courses, setCourse] = useState([])
     const [corseName, setCourseName] = useState([])
@@ -33,10 +36,11 @@ const Main = () => {
             const remaining = 20 - count
             if( count > 20){
                 
-            swal ('credit over')
+            return swal ('Your Selected Credit is Over 20')
             }
-             if(remaining < 0){
-                swal ('Finished credit hour')
+             else if(remaining < 0){
+                swal ('Credit Hour is 0')
+               
             }
             else{
             setTotalCredit(count)

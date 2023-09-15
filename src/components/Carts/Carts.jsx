@@ -30,11 +30,13 @@ const Carts = ({course, handleCourseName}) => {
             <div className="flex items-end">
             <button 
             onClick={()=>handleCourseName(course)}
-            className="bg-blue-500 p-2 w-full rounded-lg">Select</button>
+            className="bg-blue-500 p-2 w-full rounded-lg text-white">Select</button>
             </div>
             
         </div>
     );
+       
+   
 };
 
 export default Carts;
