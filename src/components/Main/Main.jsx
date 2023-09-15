@@ -2,7 +2,7 @@ import { useState } from "react";
 import Cart from "../Cart/Cart";
 import { useEffect } from "react";
 import Carts from "../Carts/Carts";
-import swal from 'sweetalert';
+
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
