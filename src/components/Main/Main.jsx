@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import Carts from "../Carts/Carts";
 import swal from 'sweetalert';
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Main = () => {
@@ -19,13 +20,17 @@ const Main = () => {
         .then(res => res.json())
         .then( data => setCourse(data))
     } ,[])
+
+    const notify =() =>toast ('hello')
+  
+
    
     const handleCourseName = (course) =>{
         const names = corseName.find( name => name.id == course.id )
         let count = course.credit;
         let total = course.price
         if(names){
-            swal("Already Selected The Course");
+            toast("Already Selected The Course");          
         }
         else{
             corseName.forEach( item =>{
@@ -36,10 +41,10 @@ const Main = () => {
             const remaining = 20 - count
             if( count > 20){
                 
-            return swal ('Your Selected Credit is Over 20')
+            return toast ('Your Selected Credit is Over 20')
             }
              else if(remaining < 0){
-                swal ('Credit Hour is 0')
+                toast ('Credit Hour is 0')
                
             }
             else{
@@ -57,30 +62,29 @@ const Main = () => {
     }
     // console.log(corseName)
     return (
-        <div className="md:flex gap-5">
+        <><div className="md:flex gap-5">
             <div className="w-3/4">
-            
-            <div className=" grid gap-4 grid-cols-1 md:grid-cols-3">
-            {
-                courses.map ( course =><Carts
-                     key={course.id}
-                     handleCourseName={handleCourseName}
 
-                      course={course} ></Carts>  )
-            }
+                <div className=" grid gap-4 grid-cols-1 md:grid-cols-3">
+                    {courses.map(course => <Carts
+                        key={course.id}
+                        handleCourseName={handleCourseName}
 
-            </div>
-           
+                        course={course}></Carts>)}
+
+                </div>
+
             </div>
             <div className="1/4">
                 <Cart
-                totalCredit={totalCredit}
-                 corseName= {corseName}
-                 remainingHour={remainingHour}
-                 totalPrice ={totalPrice}
-                 ></Cart>
+                    notify={notify}
+                    totalCredit={totalCredit}
+                    corseName={corseName}
+                    remainingHour={remainingHour}
+                    totalPrice={totalPrice}
+                ></Cart>
             </div>
-        </div>
+        </div><ToastContainer></ToastContainer></>
     );
 };
 
