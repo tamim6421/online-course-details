@@ -39,7 +39,12 @@ const Main = () => {
             })
             // console.log(total)
             const remaining = 20 - count
-            if( count > 20){
+            if( count > 20 && remaining < 0 ){
+                
+                toast ('Your Selected Credit is Over 20')
+                toast ('Credit Hour Can Not be Less Than 0')
+                }
+            else if( count > 20 ){
                 
             return toast ('Your Selected Credit is Over 20')
             }
