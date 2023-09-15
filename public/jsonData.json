@@ -11,7 +11,7 @@
       "id": 2,
       "cover": "https://i.ibb.co/fSNZvJ5/Rectangle-2-1.png",
       "Programming_course_name": "Web Development Basics",
-      "course_description": "Learn HTML, CSS, and JavaScript foundational course.",
+      "course_description": "Learn HTML, CSS, and JavaScript foundational and intermediate  course.",
       "credit": 3,
       "price": 40
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "cover": "https://i.ibb.co/KsC2cbt/Rectangle-2-4.png",
       "Programming_course_name": "Data Science Essentials",
-      "course_description": "Introductory course covering data  analysis and visualization.",
+      "course_description": "Introductory course covering data and intermediate  analysis and visualization.",
       "credit": 5,
       "price": 50
     },
@@ -59,7 +59,7 @@
       "id": 8,
       "cover": "https://i.ibb.co/2cqnS5j/Rectangle-3.png",
       "Programming_course_name": "Mobile App Development",
-      "course_description": "Build mobile apps for Android and iOS platforms.",
+      "course_description": "Build mobile apps for Android and and intermediate  hacking techniques iOS platforms.",
       "credit": 5,
       "price": 100
     },

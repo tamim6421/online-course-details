@@ -8,16 +8,14 @@ const Main = () => {
     const [courses, setCourse] = useState([])
     const [corseName, setCourseName] = useState([])
     const [totalCredit, setTotalCredit] = useState(0)
-    const [ remainingHour, setRemainingHour]= useState(0)
+    const [ remainingHour, setRemainingHour]= useState(20)
 
     useEffect( ()=>{
         fetch('jsonData.json')
         .then(res => res.json())
         .then( data => setCourse(data))
     } ,[])
-    const handleToast = () =>{
-        toast ('tost')
-    }
+   
     const handleCourseName = (course) =>{
         const names = corseName.find( name => name.id == course.id )
         let count = course.credit;
@@ -44,7 +42,7 @@ const Main = () => {
             // console.log(count)
             setCourseName([...corseName, course])
             }
-            <ToastContainer />
+            
         }
         
        

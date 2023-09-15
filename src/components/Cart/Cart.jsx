@@ -4,7 +4,7 @@
 const Cart = ({ corseName, remainingHour, totalCredit }) => {
   console.log(corseName);
   return (
-    <div className="w-80 bg-base-300 shadow-xl p-3 rounded-lg mt-3">
+    <div className="w-80  bg-base-300 shadow-xl p-3 rounded-lg mt-3">
       <div>
         <h3 className="text-blue-600 font-semibold text-xl bg-gray-100 p-1 rounded-lg ">
           Credit Hour Remaining <span>{remainingHour} </span>hr
