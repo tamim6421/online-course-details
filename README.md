@@ -4,6 +4,9 @@
 A brief description of what this project does and what is the advantage in this project
 
 
+# Project Live Link
+https://course-registration-online.netlify.app/
+
 ## Features
 
 - Course Listing and Details:
